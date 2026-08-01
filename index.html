@@ -5,32 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Firdoz | Python & Flask Developer</title>
+    <title>Firdoz | Software Engineer</title>
 
     <meta name="description"
-        content="Portfolio of Firdoz - Python Developer, Flask Developer, Web Developer and BCA Student.">
+        content="Firdoz - Software Engineer & Flask Developer Portfolio">
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
-    <!-- Google Font -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
 </head>
 
 <body>
-
-    <!-- Scroll Progress -->
-    <div id="progress-bar"></div>
 
     <!-- ================= NAVBAR ================= -->
 
@@ -38,9 +31,9 @@
 
         <nav class="navbar">
 
-            <h2 class="logo">
+            <a href="#" class="logo">
                 Firdoz<span>.</span>
-            </h2>
+            </a>
 
             <ul class="nav-links">
 
@@ -50,23 +43,19 @@
 
                 <li><a href="#skills">Skills</a></li>
 
-                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#projects">Projects</a></li>
 
                 <li><a href="#contact">Contact</a></li>
 
             </ul>
 
-            <div class="nav-icons">
+            <a href="resume/Firdoz_Resume.pdf"
+                target="_blank"
+                class="resume-btn">
 
-                <button id="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button>
+                Resume
 
-                <div class="menu-btn">
-                    <i class="fas fa-bars"></i>
-                </div>
-
-            </div>
+            </a>
 
         </nav>
 
@@ -76,512 +65,69 @@
 
     <section class="hero" id="home">
 
-        <div class="hero-content" data-aos="fade-right">
+        <!-- Background Glow -->
 
-            <p class="hello">
-                👋 Hello, I'm
-            </p>
+        <div class="hero-bg">
 
-            <h1>
-                Firdoz
-            </h1>
+            <span class="blur blur1"></span>
 
-            <h2>
-
-                <span class="typing"></span>
-
-            </h2>
-
-            <p class="hero-text">
-
-                Passionate BCA student with a strong interest in
-                Python Development, Flask, Web Technologies and
-                building real-world software solutions.
-
-                I enjoy creating modern, responsive and
-                user-friendly applications that solve practical
-                problems.
-
-            </p>
-
-            <div class="hero-buttons">
-
-                <a href="#contact" class="btn">
-
-                    <i class="fas fa-paper-plane"></i>
-
-                    Contact Me
-
-                </a>
-
-            </div>
-
-            <div class="social-icons">
-
-                <a href="https://github.com/Firdoz02" target="_blank">
-
-                    <i class="fab fa-github"></i>
-
-                </a>
-
-                <a href="#" target="_blank">
-
-                    <i class="fab fa-linkedin"></i>
-
-                </a>
-
-                <a href="mailto:firdoz2007@gmail.com">
-
-                    <i class="fas fa-envelope"></i>
-
-                </a>
-
-            </div>
+            <span class="blur blur2"></span>
 
         </div>
 
-        <div class="hero-image" data-aos="fade-left">
+        <div class="hero-container">
 
-            <div class="image-circle">
+            <!-- LEFT -->
 
-                <img src="images/profile.jpg" alt="Firdoz">
+            <div class="hero-left">
 
-            </div>
+                <p class="hero-tag">
 
-        </div>
-
-    </section>
-        <!-- ================= ABOUT ================= -->
-
-    <section class="about section" id="about">
-
-        <div class="section-title" data-aos="fade-up">
-            <h2>About Me</h2>
-            <p>Get to know me better</p>
-        </div>
-
-        <div class="about-container">
-
-            <div class="about-image" data-aos="fade-right">
-
-                <img src="images/profile.jpg" alt="Firdoz">
-
-            </div>
-
-            <div class="about-content" data-aos="fade-left">
-
-                <h3>Python & Flask Developer</h3>
-
-                <p>
-
-                    Hello! I'm <strong>Firdoz</strong>, a passionate BCA student
-                    who enjoys building modern web applications using Python,
-                    Flask, HTML, CSS, JavaScript and SQLite.
+                    👋 Hello, I'm
 
                 </p>
 
-                <p>
+                <h1>
 
-                    I enjoy solving real-world problems through software and
-                    continuously learning new technologies. My goal is to become
-                    a Full Stack Python Developer and contribute to impactful
-                    projects.
+                    Firdoz
+
+                </h1>
+
+                <h2>
+
+                    <span class="typing"></span>
+
+                </h2>
+
+                <p class="hero-description">
+
+                    Passionate BCA student specializing in Python and Flask
+                    development. I enjoy building modern, responsive and
+                    scalable web applications that solve real-world problems.
 
                 </p>
 
-                <div class="about-info">
+                <div class="hero-buttons">
 
-                    <div class="info-card">
+                    <a href="#projects" class="btn-primary">
 
-                        <i class="fas fa-user"></i>
+                        Explore Projects
 
-                        <div>
+                    </a>
 
-                            <h4>Name</h4>
+                    <a href="resume/Firdoz_Resume.pdf"
+                        target="_blank"
+                        class="btn-secondary">
 
-                            <p>Firdoz</p>
+                        Download Resume
 
-                        </div>
-
-                    </div>
-
-                    <div class="info-card">
-
-                        <i class="fas fa-location-dot"></i>
-
-                        <div>
-
-                            <h4>Location</h4>
-
-                            <p>Karnataka, India</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="info-card">
-
-                        <i class="fas fa-envelope"></i>
-
-                        <div>
-
-                            <h4>Email</h4>
-
-                            <p>firdoz2007@gmail.com</p>
-
-                        </div>
-
-                    </div>
-
-                    <div class="info-card">
-
-                        <i class="fas fa-phone"></i>
-
-                        <div>
-
-                            <h4>Phone</h4>
-
-                            <p>+91 9945938529</p>
-
-                        </div>
-
-                    </div>
+                    </a>
 
                 </div>
 
-            </div>
+                <!-- Social -->
 
-        </div>
-
-    </section>
-
-
-    <!-- ================= SKILLS ================= -->
-
-    <section class="skills section" id="skills">
-
-        <div class="section-title" data-aos="fade-up">
-
-            <h2>Technical Skills</h2>
-
-            <p>Technologies I work with</p>
-
-        </div>
-
-        <div class="skills-container">
-
-            <div class="skill-card" data-aos="fade-up">
-
-                <div class="skill-name">
-
-                    <span>HTML5</span>
-
-                    <span>95%</span>
-
-                </div>
-
-                <div class="progress">
-
-                    <div class="progress-bar html"></div>
-
-                </div>
-
-            </div>
-
-            <div class="skill-card" data-aos="fade-up">
-
-                <div class="skill-name">
-
-                    <span>CSS3</span>
-
-                    <span>90%</span>
-
-                </div>
-
-                <div class="progress">
-
-                    <div class="progress-bar css"></div>
-
-                </div>
-
-            </div>
-
-            <div class="skill-card" data-aos="fade-up">
-
-                <div class="skill-name">
-
-                    <span>JavaScript</span>
-
-                    <span>80%</span>
-
-                </div>
-
-                <div class="progress">
-
-                    <div class="progress-bar js"></div>
-
-                </div>
-
-            </div>
-
-            <div class="skill-card" data-aos="fade-up">
-
-                <div class="skill-name">
-
-                    <span>Python</span>
-
-                    <span>95%</span>
-
-                </div>
-
-                <div class="progress">
-
-                    <div class="progress-bar python"></div>
-
-                </div>
-
-            </div>
-
-            <div class="skill-card" data-aos="fade-up">
-
-                <div class="skill-name">
-
-                    <span>Flask</span>
-
-                    <span>90%</span>
-
-                </div>
-
-                <div class="progress">
-
-                    <div class="progress-bar flask"></div>
-
-                </div>
-
-            </div>
-
-            <div class="skill-card" data-aos="fade-up">
-
-                <div class="skill-name">
-
-                    <span>SQLite</span>
-
-                    <span>85%</span>
-
-                </div>
-
-                <div class="progress">
-
-                    <div class="progress-bar sqlite"></div>
-
-                </div>
-
-            </div>
-
-            <div class="skill-card" data-aos="fade-up">
-
-                <div class="skill-name">
-
-                    <span>Git & GitHub</span>
-
-                    <span>80%</span>
-
-                </div>
-
-                <div class="progress">
-
-                    <div class="progress-bar github"></div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-    
-    <!-- ================= ACHIEVEMENTS ================= -->
-
-    <section class="achievements section" id="achievements">
-
-        <div class="section-title" data-aos="fade-up">
-
-            <h2>Achievements</h2>
-
-            <p>Milestones in my learning journey</p>
-
-        </div>
-
-        <div class="achievement-container">
-
-            <div class="achievement-card" data-aos="fade-up">
-
-                <i class="fas fa-laptop-code"></i>
-
-                <h3>Full Stack Project</h3>
-
-                <p>
-
-                    Successfully developed a complete Medicine Reminder System
-                    using Flask, Python and SQLite.
-
-                </p>
-
-            </div>
-
-            <div class="achievement-card" data-aos="fade-up" data-aos-delay="100">
-
-                <i class="fas fa-database"></i>
-
-                <h3>Database Management</h3>
-
-                <p>
-
-                    Worked extensively with SQLite to perform CRUD operations
-                    and manage application data efficiently.
-
-                </p>
-
-            </div>
-
-            <div class="achievement-card" data-aos="fade-up" data-aos-delay="200">
-
-                <i class="fab fa-python"></i>
-
-                <h3>Python Development</h3>
-
-                <p>
-
-                    Built backend logic using Python and Flask while following
-                    clean coding practices.
-
-                </p>
-
-            </div>
-
-            <div class="achievement-card" data-aos="fade-up" data-aos-delay="300">
-
-                <i class="fas fa-mobile-alt"></i>
-
-                <h3>Responsive Design</h3>
-
-                <p>
-
-                    Designed responsive web pages that work smoothly across
-                    desktop, tablet and mobile devices.
-
-                </p>
-
-            </div>
-
-            <div class="achievement-card" data-aos="fade-up" data-aos-delay="400">
-
-                <i class="fab fa-github"></i>
-
-                <h3>GitHub</h3>
-
-                <p>
-
-                    Regularly use GitHub to manage source code and version
-                    control during development.
-
-                </p>
-
-            </div>
-
-            <div class="achievement-card" data-aos="fade-up" data-aos-delay="500">
-
-                <i class="fas fa-book-open"></i>
-
-                <h3>Continuous Learning</h3>
-
-                <p>
-
-                    Constantly improving my skills by building projects and
-                    exploring modern web technologies.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-        <!-- ================= CONTACT ================= -->
-
-    <section class="contact section" id="contact">
-
-        <div class="section-title" data-aos="fade-up">
-
-            <h2>Contact Me</h2>
-
-            <p>Let's build something amazing together.</p>
-
-        </div>
-
-        <div class="contact-container">
-
-            <!-- Left -->
-
-            <div class="contact-info" data-aos="fade-right">
-
-                <div class="contact-card">
-
-                    <i class="fas fa-user"></i>
-
-                    <div>
-
-                        <h3>Firdoz</h3>
-
-                        <p>Python & Flask Developer</p>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-card">
-
-                    <i class="fas fa-envelope"></i>
-
-                    <div>
-
-                        <h3>Email</h3>
-
-                        <p>firdoz2007@gmail.com</p>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-card">
-
-                    <i class="fas fa-phone"></i>
-
-                    <div>
-
-                        <h3>Phone</h3>
-
-                        <p>+91 9945938529</p>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-card">
-
-                    <i class="fas fa-location-dot"></i>
-
-                    <div>
-
-                        <h3>Location</h3>
-
-                        <p>Karnataka, India</p>
-
-                    </div>
-
-                </div>
-
-                <div class="contact-social">
+                <div class="hero-social">
 
                     <a href="https://github.com/Firdoz02" target="_blank">
 
@@ -589,53 +135,54 @@
 
                     </a>
 
-                    <!-- Replace with your real LinkedIn profile URL -->
-
-                    <a href="#" target="_blank">
+                    <a href="#">
 
                         <i class="fab fa-linkedin"></i>
 
                     </a>
 
+                    <a href="mailto:firdoz2007@gmail.com">
+
+                        <i class="fas fa-envelope"></i>
+
+                    </a>
+
+                </div>
+
+                <!-- Skills -->
+
+                <div class="skill-chips">
+
+                    <span>🐍 Python</span>
+
+                    <span>⚡ Flask</span>
+
+                    <span>🌐 HTML</span>
+
+                    <span>🎨 CSS</span>
+
+                    <span>🟨 JavaScript</span>
+
+                    <span>🗄 DBMS</span>
+
+                    <span>☕ Java</span>
+
+                    <span>🧠 Data Structures</span>
+
                 </div>
 
             </div>
 
-            <!-- Right -->
+            <!-- RIGHT -->
 
-            <div class="contact-form" data-aos="fade-left">
+            <div class="hero-right">
 
-                <form>
+                <div class="photo-glow">
 
-                    <input
-                        type="text"
-                        placeholder="Your Name"
-                        required>
+                    <img src="images/profile.png"
+                        alt="Firdoz">
 
-                    <input
-                        type="email"
-                        placeholder="Your Email"
-                        required>
-
-                    <input
-                        type="text"
-                        placeholder="Subject"
-                        required>
-
-                    <textarea
-                        rows="6"
-                        placeholder="Write your message..."
-                        required></textarea>
-
-                    <button
-                        type="submit"
-                        class="btn">
-
-                        Send Message
-
-                    </button>
-
-                </form>
+                </div>
 
             </div>
 
@@ -643,66 +190,307 @@
 
     </section>
 
+</body>
+
+</html>
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+    <div class="about-container">
 
 
-    <!-- ================= FOOTER ================= -->
+        <div class="about-content">
 
-    <footer>
+            <h4>ABOUT ME</h4>
 
-        <h2>Firdoz</h2>
+            <h2>Passionate Software Developer & Flask Developer</h2>
 
-        <p>
+            <p>
 
-            Python Developer |
-            Flask Developer |
-            Web Developer
+                I'm Firdoz, a passionate BCA student with a strong interest
+                in Python, Flask, and modern web development and software development.
 
-        </p>
+                I enjoy creating responsive websites and solving
+                real-world problems through clean and efficient code.
 
-        <div class="footer-icons">
+                My goal is to become a Software Engineer ,
+                while continuously learning new technologies.
 
-            <a href="https://github.com/Firdoz02" target="_blank">
+            </p>
 
-                <i class="fab fa-github"></i>
+            <div class="about-info">
 
-            </a>
+                <div>
 
-            <a href="#" target="_blank">
+                    <span>Name</span>
 
-                <i class="fab fa-linkedin"></i>
+                    <h5>Firdoz</h5>
 
-            </a>
+                </div>
 
-            <a href="mailto:firdoz2007@gmail.com">
+                <div>
 
-                <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+
+                    <h5>firdoz2007@gmail.com</h5>
+
+                </div>
+
+                <div>
+
+                    <span>Education</span>
+
+                    <h5>BCA (2027)</h5>
+
+                </div>
+
+                <div>
+
+                    <span>Location</span>
+
+                    <h5>Karnataka, India</h5>
+
+                </div>
+
+            </div>
+
+            <a href="resume/Firdoz_Resume.pdf"
+                target="_blank"
+                class="about-btn">
+
+                Download Resume
 
             </a>
 
         </div>
 
-        <p class="copyright">
+    </div>
 
-            © 2026 Firdoz.
-            All Rights Reserved.
+</section>
 
-        </p>
+<!-- ================= SKILLS ================= -->
 
-    </footer>
+<section class="skills" id="skills">
 
+    <h4>MY SKILLS</h4>
 
-    <!-- Typed JS -->
+    <h2>Technologies I Work With</h2>
 
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <div class="skills-grid">
 
-    <!-- AOS -->
+        <div class="skill-card">🐍 Python</div>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+        <div class="skill-card">⚡ Flask</div>
 
-    <!-- Main JS -->
+        <div class="skill-card">🌐 HTML</div>
 
-    <script src="script.js"></script>
+        <div class="skill-card">🎨 CSS</div>
 
-</body>
+        <div class="skill-card">🟨 JavaScript</div>
 
-</html>
+        <div class="skill-card">🗄 DBMS</div>
+
+        <div class="skill-card">☕ Java</div>
+
+        <div class="skill-card">🧠 Data Structures</div>
+
+        <div class="skill-card">🐙 GitHub</div>
+
+        <div class="skill-card">💻 VS Code</div>
+
+    </div>
+
+</section>
+<!-- ================= SOFT SKILLS ================= -->
+
+<section class="soft-skills" id="soft-skills">
+
+    <h4>SOFT SKILLS</h4>
+
+    <h2>My Strengths</h2>
+
+    <div class="skills-grid soft-skills-grid">
+
+        <div class="skill-card">🤝 Teamwork</div>
+
+        <div class="skill-card">💬 Communication</div>
+
+        <div class="skill-card">🧠 Problem Solving</div>
+
+        <div class="skill-card">⏰ Time Management</div>
+
+        <div class="skill-card">🚀 Quick Learner</div>
+
+        <div class="skill-card">🎯 Leadership</div>
+
+        <div class="skill-card">📚 Adaptability</div>
+
+        <div class="skill-card">💡 Creativity</div>
+
+    </div>
+
+</section>
+<!-- ================= PROJECTS ================= -->
+
+<section class="projects" id="projects">
+
+    <h4>MY PROJECTS</h4>
+    <h2>Featured Projects</h2>
+
+    <div class="project-container">
+
+        <!-- Project 1 -->
+
+        <div class="project-card">
+
+            <span class="project-status completed">
+                🟢 Completed
+            </span>
+
+            <h3>Student Application Management System</h3>
+
+            <p>
+                A web-based Student Application Management System that allows
+                users to submit, manage and organize student applications
+                efficiently. The application provides a responsive interface,
+                secure data handling, and an easy-to-use dashboard.
+            </p>
+
+            <div class="project-tech">
+
+                <span>Python</span>
+                <span>Flask</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>SQLite</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a href=https://student-admission-portal-gv3d.onrender.com target="_blank">
+                    <i class="fas fa-globe"></i> Live Demo
+                </a>
+
+                <a href=https://github.com/Firdoz0502target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+        <!-- Project 2 -->
+
+        <div class="project-card">
+
+            <span class="project-status progress">
+                🟡 In Progress
+            </span>
+
+            <h3>Medicine Reminder System</h3>
+
+            <p>
+                A smart Medicine Reminder web application that helps users
+                manage medications with secure login, medicine scheduling,
+                reminders, and an intuitive dashboard. The project is
+                currently under development with additional features being
+                added regularly.
+            </p>
+
+            <div class="project-tech">
+
+                <span>Python</span>
+                <span>Flask</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>SQLite</span>
+                <span>Gemini API</span>
+
+            </div>
+
+            <div class="project-buttons">
+
+                <a href=https://github.com/Firdoz0502 target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+
+                <a href="#">
+                    🚧 Coming Soon
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+    <h4>CONTACT ME</h4>
+
+    <h2>Let's Connect</h2>
+
+    <p>
+        I'm always open to internship opportunities, collaborations,
+        and exciting software development projects.
+    </p>
+
+    <div class="contact-container">
+
+        <div class="contact-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <p>firdoz2007@gmail.com</p>
+        </div>
+
+        <div class="contact-card">
+            <i class="fab fa-github"></i>
+            <h3>GitHub</h3>
+            <a href="https://github.com/Firdoz0502" target="_blank">
+                github.com/Firdoz0502
+            </a>
+        </div>
+
+        <div class="contact-card">
+            <i class="fab fa-linkedin"></i>
+            <h3>LinkedIn</h3>
+            <a href=https://www.linkedin.com/in/firdoz-firdoz-55b373424?trk=contact-info target="_blank">
+                View Profile
+            </a>
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <p>
+        © 2026 Firdoz. All Rights Reserved.
+    </p>
+
+    <div class="footer-social">
+
+        <a href="https://github.com/Firdoz0502" target="_blank">
+            <i class="fab fa-github"></i>
+        </a>
+
+        <a href=https://www.linkedin.com/in/firdoz-firdoz-55b373424?trk=contact-info target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+
+        <a href="mailto:firdoz2007@gmail.com">
+            <i class="fas fa-envelope"></i>
+        </a>
+
+    </div>
+
+</footer>

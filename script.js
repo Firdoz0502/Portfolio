@@ -1,73 +1,126 @@
-// ==============================
-// AOS Animation
-// ==============================
+/* ==========================================
+   AOS Animation
+========================================== */
 
 AOS.init({
-    duration: 1000,
-    once: true
+
+    duration:1000,
+
+    once:true,
+
+    easing:"ease-in-out"
+
 });
 
-// ==============================
-// Typing Animation
-// ==============================
 
-new Typed(".typing", {
-    strings: [
+/* ==========================================
+   Typing Effect
+========================================== */
+
+new Typed(".typing",{
+
+    strings:[
+
         "Python Developer",
+
         "Flask Developer",
-        "Frontend Developer",
-        "BCA Student"
+
+        "Backend Developer",
+
+        "Web Developer",
+
+        "Problem Solver"
+
     ],
-    typeSpeed: 80,
-    backSpeed: 50,
-    backDelay: 1500,
-    loop: true
+
+    typeSpeed:70,
+
+    backSpeed:45,
+
+    backDelay:1800,
+
+    loop:true
+
 });
 
-// ==============================
-// Dark / Light Mode
-// ==============================
 
-const themeBtn = document.getElementById("theme-toggle");
+/* ==========================================
+   Sticky Navbar
+========================================== */
 
-themeBtn.onclick = () => {
+const header = document.getElementById("header");
 
-    document.body.classList.toggle("light-mode");
+window.addEventListener("scroll",()=>{
 
-    const icon = themeBtn.querySelector("i");
+    if(window.scrollY>60){
 
-    if(document.body.classList.contains("light-mode")){
-
-        icon.classList.remove("fa-moon");
-        icon.classList.add("fa-sun");
-
-    }else{
-
-        icon.classList.remove("fa-sun");
-        icon.classList.add("fa-moon");
+        header.style.backdropFilter="blur(20px)";
 
     }
 
-};
+});
 
-// ==============================
-// Mobile Menu
-// ==============================
 
-const menuBtn = document.querySelector(".menu-btn");
-const navLinks = document.querySelector(".nav-links");
+/* ==========================================
+   Loader
+========================================== */
 
-menuBtn.onclick = () => {
+window.addEventListener("load",()=>{
+
+    const loader=document.getElementById("loader");
+
+    setTimeout(()=>{
+
+        loader.style.opacity="0";
+
+        loader.style.visibility="hidden";
+
+        loader.style.transition=".6s";
+
+    },1200);
+
+});
+
+
+/* ==========================================
+   Cursor Glow
+========================================== */
+
+const glow=document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove",(e)=>{
+
+    glow.style.left=e.clientX-120+"px";
+
+    glow.style.top=e.clientY-120+"px";
+
+});
+
+
+/* ==========================================
+   Mobile Menu
+========================================== */
+
+const menuBtn=document.querySelector(".menu-btn");
+
+const navLinks=document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click",()=>{
 
     navLinks.classList.toggle("active");
 
-};
+});
 
-// Close menu after clicking a link
 
-document.querySelectorAll(".nav-links a").forEach(link => {
+/* ==========================================
+   Close Mobile Menu
+========================================== */
 
-    link.addEventListener("click", () => {
+document.querySelectorAll(".nav-links a")
+
+.forEach(link=>{
+
+    link.addEventListener("click",()=>{
 
         navLinks.classList.remove("active");
 
@@ -75,58 +128,4 @@ document.querySelectorAll(".nav-links a").forEach(link => {
 
 });
 
-// ==============================
-// Scroll Progress Bar
-// ==============================
 
-window.addEventListener("scroll", () => {
-
-    let scrollTop = document.documentElement.scrollTop;
-
-    let height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-
-    let progress = (scrollTop / height) * 100;
-
-    document.getElementById("progress-bar").style.width =
-        progress + "%";
-
-});
-
-// ==============================
-// Sticky Navbar Shadow
-// ==============================
-
-window.addEventListener("scroll", () => {
-
-    const header = document.querySelector("header");
-
-    if(window.scrollY > 40){
-
-        header.style.boxShadow =
-            "0 8px 20px rgba(0,0,0,.25)";
-
-    }else{
-
-        header.style.boxShadow = "none";
-
-    }
-
-});
-
-// ==============================
-// Contact Form
-// ==============================
-
-const form = document.querySelector("form");
-
-form.addEventListener("submit", function(e){
-
-    e.preventDefault();
-
-    alert("Thank you! Your message has been received.");
-
-    form.reset();
-
-});
