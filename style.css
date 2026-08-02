@@ -1276,3 +1276,225 @@ FOOTER
     transform:translateY(-5px);
 
 }
+/*==================================================
+SECTION TITLE
+==================================================*/
+
+.section-title{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 60px;
+}
+
+.section-title h4{
+    color:#38bdf8;
+    letter-spacing:2px;
+    margin-bottom:10px;
+}
+
+.section-title h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.section-title p{
+    color:#CBD5E1;
+    line-height:1.8;
+}
+
+/*==================================================
+LOADER
+==================================================*/
+
+.loader{
+    position:fixed;
+    inset:0;
+    background:#030712;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:.6s;
+}
+
+.loader-circle{
+    width:70px;
+    height:70px;
+    border:6px solid rgba(255,255,255,.15);
+    border-top:6px solid #38bdf8;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+
+/*==================================================
+THEME BUTTON
+==================================================*/
+
+.theme-toggle{
+    width:46px;
+    height:46px;
+    border:none;
+    cursor:pointer;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    color:#fff;
+    transition:.3s;
+}
+
+.theme-toggle:hover{
+    background:#2563eb;
+    transform:rotate(180deg);
+}
+
+/*==================================================
+NAV ACTIONS
+==================================================*/
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+/*==================================================
+RESPONSIVE
+==================================================*/
+
+@media(max-width:768px){
+
+    .section-title h2{
+        font-size:32px;
+    }
+
+    .floating-card{
+        display:none;
+    }
+
+    .nav-actions{
+        gap:10px;
+    }
+
+}
+/* ===============================
+   LIGHT MODE
+================================*/
+
+body{
+    transition:0.4s;
+}
+
+body.light{
+    background:#f5f7fb;
+    color:#111827;
+}
+
+/* Navbar */
+
+body.light .navbar{
+    background:rgba(255,255,255,.9);
+    border:1px solid rgba(0,0,0,.08);
+}
+
+body.light .logo,
+body.light .nav-links a,
+body.light h1,
+body.light h2,
+body.light h3,
+body.light h4,
+body.light h5{
+    color:#111827;
+}
+
+body.light .hero-description,
+body.light p,
+body.light span{
+    color:#4b5563;
+}
+
+/* Cards */
+
+body.light .skill-card,
+body.light .project-card,
+body.light .contact-card,
+body.light .about-info div{
+
+    background:#ffffff;
+    border:1px solid #e5e7eb;
+    color:#111827;
+}
+
+/* Chips */
+
+body.light .skill-chips span,
+body.light .project-tech span{
+
+    background:#eef2ff;
+    color:#2563eb;
+}
+
+/* Footer */
+
+body.light .footer{
+
+    border-top:1px solid #d1d5db;
+
+}
+
+/* Buttons */
+
+body.light .btn-secondary{
+
+    background:#ffffff;
+    color:#111827;
+    border:1px solid #d1d5db;
+
+}
+
+/* Profile Image Border */
+
+body.light .photo-glow img{
+
+    border:6px solid white;
+
+}
+
+/* Theme Button */
+
+body.light .theme-toggle{
+
+    background:#2563eb;
+    color:white;
+
+}
+/*=========================
+VIDEO SECTION
+=========================*/
+
+.video-section{
+    padding:120px 8%;
+    text-align:center;
+}
+
+.video-container{
+    width:100%;
+    max-width:900px;
+    margin:60px auto 0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.video-container video{
+    width:100%;
+    max-width:900px;
+    border-radius:20px;
+    border:3px solid #38bdf8;
+    box-shadow:0 20px 50px rgba(56,189,248,.35);
+}

@@ -2,47 +2,35 @@
    AOS Animation
 ========================================== */
 
-AOS.init({
-
-    duration:1000,
-
-    once:true,
-
-    easing:"ease-in-out"
-
-});
-
+if (typeof AOS !== "undefined") {
+    AOS.init({
+        duration: 1000,
+        once: true,
+        easing: "ease-in-out"
+    });
+}
 
 /* ==========================================
    Typing Effect
 ========================================== */
 
-new Typed(".typing",{
+if (document.querySelector(".typing") && typeof Typed !== "undefined") {
 
-    strings:[
+    new Typed(".typing", {
+        strings: [
+            "Python Developer",
+            "Flask Developer",
+            "Backend Developer",
+            "Web Developer",
+            "Problem Solver"
+        ],
+        typeSpeed: 70,
+        backSpeed: 45,
+        backDelay: 1800,
+        loop: true
+    });
 
-        "Python Developer",
-
-        "Flask Developer",
-
-        "Backend Developer",
-
-        "Web Developer",
-
-        "Problem Solver"
-
-    ],
-
-    typeSpeed:70,
-
-    backSpeed:45,
-
-    backDelay:1800,
-
-    loop:true
-
-});
-
+}
 
 /* ==========================================
    Sticky Navbar
@@ -50,49 +38,43 @@ new Typed(".typing",{
 
 const header = document.getElementById("header");
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-    if(window.scrollY>60){
+    if (header) {
 
-        header.style.backdropFilter="blur(20px)";
+        if (window.scrollY > 60) {
+
+            header.style.backdropFilter = "blur(20px)";
+
+        } else {
+
+            header.style.backdropFilter = "blur(0px)";
+
+        }
 
     }
 
 });
 
-
 /* ==========================================
    Loader
 ========================================== */
 
-window.addEventListener("load",()=>{
+window.addEventListener("load", () => {
 
-    const loader=document.getElementById("loader");
+    const loader = document.getElementById("loader");
 
-    setTimeout(()=>{
+    if (loader) {
 
-        loader.style.opacity="0";
+        setTimeout(() => {
 
-        loader.style.visibility="hidden";
+            loader.style.opacity = "0";
+            loader.style.visibility = "hidden";
+            loader.style.transition = ".6s";
 
-        loader.style.transition=".6s";
+        }, 1200);
 
-    },1200);
-
-});
-
-
-/* ==========================================
-   Cursor Glow
-========================================== */
-
-const glow=document.querySelector(".cursor-glow");
-
-document.addEventListener("mousemove",(e)=>{
-
-    glow.style.left=e.clientX-120+"px";
-
-    glow.style.top=e.clientY-120+"px";
+    }
 
 });
 
@@ -101,31 +83,108 @@ document.addEventListener("mousemove",(e)=>{
    Mobile Menu
 ========================================== */
 
-const menuBtn=document.querySelector(".menu-btn");
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
 
-const navLinks=document.querySelector(".nav-links");
+if (menuBtn && navLinks) {
 
-menuBtn.addEventListener("click",()=>{
+    menuBtn.addEventListener("click", () => {
 
-    navLinks.classList.toggle("active");
+        navLinks.classList.toggle("active");
 
-});
+    });
 
+}
 
 /* ==========================================
    Close Mobile Menu
 ========================================== */
 
-document.querySelectorAll(".nav-links a")
+if (navLinks) {
 
-.forEach(link=>{
+    document.querySelectorAll(".nav-links a").forEach(link => {
 
-    link.addEventListener("click",()=>{
+        link.addEventListener("click", () => {
 
-        navLinks.classList.remove("active");
+            navLinks.classList.remove("active");
+
+        });
+
+    });
+
+}
+
+/* ==========================================
+   Dark / Light Mode
+========================================== */
+
+const themeBtn = document.getElementById("theme-toggle");
+
+if (themeBtn) {
+
+    const body = document.body;
+    const icon = themeBtn.querySelector("i");
+
+    const savedTheme = localStorage.getItem("theme");
+
+    if (savedTheme === "light") {
+
+        body.classList.add("light");
+
+        if (icon) {
+            icon.className = "fas fa-sun";
+        }
+
+    }
+
+    themeBtn.addEventListener("click", () => {
+
+        body.classList.toggle("light");
+
+        if (body.classList.contains("light")) {
+
+            localStorage.setItem("theme", "light");
+
+            if (icon) {
+                icon.className = "fas fa-sun";
+            }
+
+        } else {
+
+            localStorage.setItem("theme", "dark");
+
+            if (icon) {
+                icon.className = "fas fa-moon";
+            }
+
+        }
+
+    });
+
+}
+
+/* ==========================================
+   Smooth Scrolling
+========================================== */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+    anchor.addEventListener("click", function (e) {
+
+        e.preventDefault();
+
+        const target = document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+
+            target.scrollIntoView({
+
+                behavior: "smooth"
+
+            });
+
+        }
 
     });
 
 });
-
-
